@@ -50,6 +50,7 @@ This package provides the documentation for %{name}.
 
 %package vim
 Summary:	VIM support for %{name}
+Requires:	%{name} = %{version}-%{release}
 
 %description vim
 This package provides Vim integration for %{name}.
@@ -59,6 +60,7 @@ This package provides Vim integration for %{name}.
 
 %package emacs
 Summary:	Emacs for %{name}
+Requires:	%{name} = %{version}-%{release}
 
 %description emacs
 This package provides Emacs integration for %{name}.
