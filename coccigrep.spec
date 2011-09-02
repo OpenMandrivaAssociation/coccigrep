@@ -52,6 +52,7 @@ Summary:	VIM support for %{name}
 This package provides Vim integration for %{name}.
 
 %files vim
+%{_datadir}/vim/plugin/cocci-grep.vim
 
 %package emacs
 Summary:	Emacs for %{name}
@@ -60,6 +61,7 @@ Summary:	Emacs for %{name}
 This package provides Emacs integration for %{name}.
 
 %files emacs
+%{_datadir}/emacs/site-lisp/cocci-grep.el
 
 %prep
 %setup -q -n %{oname}-%{version}
@@ -77,4 +79,9 @@ python setup.py install --root=%{buildroot}
 pushd doc
 %{__install} -m0644 -D _build/latex/%{name}.pdf %{buildroot}%{_docdir}/%{name}-doc/%{name}.pdf
 %{__install} -m0644 -D _build/man/%{name}.1 %{buildroot}%{_mandir}/man1/%{name}.1
+popd
+
+pushd editors
+%{__install} -m0644 -D cocci-grep.vim %{buildroot}%{_datadir}/vim/plugin/cocci-grep.vim
+%{__install} -m0644 -D cocci-grep.el %{buildroot}%{_datadir}/emacs/site-lisp/cocci-grep.el
 popd
