@@ -15,6 +15,7 @@ Suggests:	%{name}-doc = %{version}-%{release}
 Suggests:	%{name}-vim = %{version}-%{release}
 Suggests:	%{name}-emacs = %{version}-%{release}
 BuildRequires:	python-sphinx
+BuildRequires:	texlive-texmf
 %py_requires -d
 
 %description
