@@ -11,8 +11,8 @@ Url:		http://home.regit.org/software/coccigrep/
 BuildArch:	noarch
 Requires:	coccinelle
 Requires:	%{name}-data = %{version}-%{release}
-BuildRequires:  python-devel
-%{!?python_sitelib: %define python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print get_python_lib()")}
+BuildRequires:	python-sphinx
+%py_requires -d
 
 %description
 Coccigrep is a semantic grep for the C language based on coccinelle. It
@@ -21,6 +21,7 @@ coccigrep depends on the spatch program which comes with coccinelle.
 
 %files
 %{_bindir}/%{name}
+%{_mandir}/man1/%{name}.*
 %{py_puresitedir}/%{name}/*.py*
 %{py_puresitedir}/%{name}*.egg-info
 
@@ -42,6 +43,7 @@ Summary:	Documentation for %{name}
 This package provides the documentation for %{name}.
 
 %files doc
+%{_docdir}/%{name}-doc/%{name}.pdf
 
 %package vim
 Summary:	VIM support for %{name}
@@ -65,5 +67,14 @@ This package provides Emacs integration for %{name}.
 %build
 python setup.py build
 
+pushd doc
+%make man latexpdf
+popd
+
 %install
 python setup.py install --root=%{buildroot}
+
+pushd doc
+%{__install} -m0644 -D _build/latex/%{name}.pdf %{buildroot}%{_docdir}/%{name}-doc/%{name}.pdf
+%{__install} -m0644 -D _build/man/%{name}.1 %{buildroot}%{_mandir}/man1/%{name}.1
+popd
