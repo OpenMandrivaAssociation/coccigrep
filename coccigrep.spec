@@ -11,6 +11,9 @@ Url:		http://home.regit.org/software/coccigrep/
 BuildArch:	noarch
 Requires:	coccinelle
 Requires:	%{name}-data = %{version}-%{release}
+Suggests:	%{name}-doc = %{version}-%{release}
+Suggests:	%{name}-vim = %{version}-%{release}
+Suggests:	%{name}-emacs = %{version}-%{release}
 BuildRequires:	python-sphinx
 %py_requires -d
 
