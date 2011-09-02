@@ -76,7 +76,7 @@ This package provides Emacs integration for %{name}.
 python setup.py build
 
 pushd doc
-%make man latexpdf
+make man latexpdf
 popd
 
 %install
