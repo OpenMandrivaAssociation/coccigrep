@@ -1,7 +1,7 @@
 %define	oname	coccigrep
 
 Name:		%{oname}
-Version:	1.0rc1
+Version:	1.8
 Release:	1
 Summary:	Semantic grep for C based on coccinelle
 Source0:	http://pypi.python.org/packages/source/c/%{oname}/%{oname}-%{version}.tar.gz
@@ -15,6 +15,7 @@ Suggests:	%{name}-doc = %{version}-%{release}
 Suggests:	%{name}-vim = %{version}-%{release}
 Suggests:	%{name}-emacs = %{version}-%{release}
 BuildRequires:	python-sphinx
+BuildRequires:	python-setuptools
 BuildRequires:	texlive
 %py_requires -d
 
