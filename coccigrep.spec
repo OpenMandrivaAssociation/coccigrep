@@ -1,10 +1,8 @@
-%define	oname	coccigrep
-
-Name:		%{oname}
-Version:	1.8
+Name:		coccigrep
+Version:	1.9
 Release:	1
 Summary:	Semantic grep for C based on coccinelle
-Source0:	http://pypi.python.org/packages/source/c/%{oname}/%{oname}-%{version}.tar.gz
+Source0:	http://pypi.python.org/packages/source/c/%{name}/%{name}-%{version}.tar.gz
 License:	GNU General Public License (GPL)
 Group:		Development/C
 Url:		http://home.regit.org/software/coccigrep/
@@ -71,7 +69,7 @@ This package provides Emacs integration for %{name}.
 %{_datadir}/emacs/site-lisp/cocci-grep.el
 
 %prep
-%setup -q -n %{oname}-%{version}
+%setup -q
 
 %build
 python setup.py build
