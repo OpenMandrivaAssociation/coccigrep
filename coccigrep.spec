@@ -90,3 +90,30 @@ pushd editors
 %{__install} -m0644 -D cocci-grep.vim %{buildroot}%{_datadir}/vim/plugin/cocci-grep.vim
 %{__install} -m0644 -D cocci-grep.el %{buildroot}%{_datadir}/emacs/site-lisp/cocci-grep.el
 popd
+
+
+%changelog
+* Mon Aug 06 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 1.9-1
++ Revision: 811879
+- update to 1.9
+
+* Tue Mar 06 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.8-1
++ Revision: 782431
+- version update  1.8
+
+* Fri Sep 02 2011 Alexandre Lissy <alissy@mandriva.com> 1.0rc1-1
++ Revision: 697868
+- Avoid -j when building doc
+- Fix BuildRequires
+- Adding missing buildrequires for LaTeX
+- Changing group
+- Fix Requires for vim/emacs
+- Fix requires/suggests
+- Add vim plugin
+- Add emacs stuff
+- Fix BuildRequires
+- Adding doc
+- Adding manpage
+- Preliminary version ; still missing lot of cool stuff.
+- Created package structure for 'coccigrep'.
+
