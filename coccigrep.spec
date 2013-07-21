@@ -1,8 +1,8 @@
 Name:		coccigrep
-Version:	1.9
+Version:	1.12
 Release:	1
 Summary:	Semantic grep for C based on coccinelle
-Source0:	http://pypi.python.org/packages/source/c/%{name}/%{name}-%{version}.tar.gz
+Source0:	http://pypi.python.org/packages/source/c/coccigrep/%{name}-%{version}.tar.gz
 License:	GNU General Public License (GPL)
 Group:		Development/C
 Url:		http://home.regit.org/software/coccigrep/
@@ -116,4 +116,5 @@ popd
 - Adding manpage
 - Preliminary version ; still missing lot of cool stuff.
 - Created package structure for 'coccigrep'.
+
 
