@@ -15,7 +15,7 @@ Suggests:	%{name}-emacs = %{version}-%{release}
 BuildRequires:	python-sphinx
 BuildRequires:	python-setuptools
 BuildRequires:	texlive
-%py_requires -d
+BuildRequires:  python-devel
 
 %description
 Coccigrep is a semantic grep for the C language based on coccinelle. It
