@@ -1,7 +1,8 @@
 Name:		coccigrep
-Version:	1.12
+Version:	1.13
 Release:	1
 Summary:	Semantic grep for C based on coccinelle
+
 Source0:	http://pypi.python.org/packages/source/c/coccigrep/%{name}-%{version}.tar.gz
 License:	GNU General Public License (GPL)
 Group:		Development/C
@@ -31,6 +32,7 @@ coccigrep depends on the spatch program which comes with coccinelle.
 %package data
 Summary:	Data for %{name}
 
+
 %description data
 This package provides the data for %{name}, i.e. the coccinelle semantic
 patches.
@@ -42,6 +44,7 @@ patches.
 %package doc
 Summary:	Documentation for %{name}
 
+
 %description doc
 This package provides the documentation for %{name}.
 
@@ -50,6 +53,7 @@ This package provides the documentation for %{name}.
 
 %package vim
 Summary:	VIM support for %{name}
+
 Requires:	%{name} = %{version}-%{release}
 
 %description vim
@@ -60,6 +64,7 @@ This package provides Vim integration for %{name}.
 
 %package emacs
 Summary:	Emacs for %{name}
+
 Requires:	%{name} = %{version}-%{release}
 
 %description emacs
@@ -91,30 +96,5 @@ pushd editors
 %{__install} -m0644 -D cocci-grep.el %{buildroot}%{_datadir}/emacs/site-lisp/cocci-grep.el
 popd
 
-
-%changelog
-* Mon Aug 06 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 1.9-1
-+ Revision: 811879
-- update to 1.9
-
-* Tue Mar 06 2012 Alexander Khrukin <akhrukin@mandriva.org> 1.8-1
-+ Revision: 782431
-- version update  1.8
-
-* Fri Sep 02 2011 Alexandre Lissy <alissy@mandriva.com> 1.0rc1-1
-+ Revision: 697868
-- Avoid -j when building doc
-- Fix BuildRequires
-- Adding missing buildrequires for LaTeX
-- Changing group
-- Fix Requires for vim/emacs
-- Fix requires/suggests
-- Add vim plugin
-- Add emacs stuff
-- Fix BuildRequires
-- Adding doc
-- Adding manpage
-- Preliminary version ; still missing lot of cool stuff.
-- Created package structure for 'coccigrep'.
 
 

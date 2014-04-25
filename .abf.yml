@@ -1,4 +1,5 @@
 removed_sources:
+  coccigrep-1.12.tar.gz: 4680a5932066ff7a54b9f3d27725d47d54ecff9c
   coccigrep-1.9.tar.gz: a6af94ff274dc18c1272ed7eb6fdde57c418a263
 sources:
-  coccigrep-1.12.tar.gz: 4680a5932066ff7a54b9f3d27725d47d54ecff9c
+  coccigrep-1.13.tar.gz: b6431c8abdad3cf7db448a25ffd48d80c20f2e7e
