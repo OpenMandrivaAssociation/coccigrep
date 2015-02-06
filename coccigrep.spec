@@ -1,6 +1,6 @@
 Name:		coccigrep
 Version:	1.13
-Release:	1
+Release:	2
 Summary:	Semantic grep for C based on coccinelle
 
 Source0:	http://pypi.python.org/packages/source/c/coccigrep/%{name}-%{version}.tar.gz
