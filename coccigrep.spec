@@ -6,7 +6,7 @@ Summary:	Semantic grep for C based on coccinelle
 Source0:	http://pypi.python.org/packages/source/c/coccigrep/%{name}-%{version}.tar.gz
 License:	GNU General Public License (GPL)
 Group:		Development/C
-Url:		http://home.regit.org/software/coccigrep/
+Url:		https://home.regit.org/software/coccigrep/
 BuildArch:	noarch
 Requires:	coccinelle
 Requires:	%{name}-data = %{version}-%{release}
